@@ -13,10 +13,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Gradle setup karo
+        uses: gradle/actions/setup-gradle@v3
       - name: Build APK
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
+        run: gradle assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
