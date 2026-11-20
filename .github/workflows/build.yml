@@ -9,12 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
-            - name: Android SDK lagao
-        uses: android-actions/setup-android@v3
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Android SDK lagao
+        uses: android-actions/setup-android@v3
       - name: Gradle setup karo
         uses: gradle/actions/setup-gradle@v3
       - name: Build APK
