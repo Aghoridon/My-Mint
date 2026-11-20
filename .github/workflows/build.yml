@@ -13,8 +13,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Android SDK lagao
-        uses: android-actions/setup-android@v3
       - name: Gradle setup karo
         uses: gradle/actions/setup-gradle@v3
       - name: Build APK
